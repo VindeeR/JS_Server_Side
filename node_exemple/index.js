@@ -12,6 +12,8 @@ function solveRect(l, b) {
                 " is " + rectangule.area());
             console.log("The perimeter of the rectangle of dimensions l = " + l + " an b = " + b +
                 " is " + rectangule.perimeter());
+            console.log("The triangule l = " + l + " an b = " + b +
+                " is " + rectangule.triangle());
         }
     });
     console.log("This statment is after the call to rect()");
