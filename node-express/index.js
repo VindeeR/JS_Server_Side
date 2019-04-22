@@ -47,13 +47,14 @@ app.post('/dishes/:dishId', (req, res, next) => {
 });
 
 app.put('/dishes/:dishId', (req, res, next) => {
-    res.end('Will update the dish: '
-        + req.params.dishId);
+    res.write('Updating the dish: ' + req.params.dishId);
+    res.end('\nWill update the dish: ' + req.body.name +
+    ' with details: ' + req.body.description);
 });
 
 app.delete('/dishes/:dishId', (req, res, next) => {
     res.statusCode = 403;
-    res.end('Deleting all the dishes!');
+    res.end('Deleting dishes: ' +req.params.dishId);
 });
 
 app.use(express.static(__dirname + '/public'))
